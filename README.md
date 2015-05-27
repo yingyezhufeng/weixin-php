@@ -1,2 +1,1 @@
-# weixin-php
-微信接入php版
+Cloud code project for weixin. Cloud Code Guide: https://cn.avoscloud.com/docs/cloud_code_guide.html
