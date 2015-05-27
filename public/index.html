@@ -1,14 +1,27 @@
 <html>
 	<head>
+		<script src="https://cdn1.lncld.net/static/js/av-mini-0.5.4.js"></script>
+		//或者你只是用最核心的存储、推送等功能，可以使用精简版的core.js
+		<script src="https://cdn1.lncld.net/static/js/av-core-mini-0.5.4.js"></script>
 		<script type="text/javascript">
-			window.onload=function(){
-				alert("welcom");
-			}
+			// window.onload=function(){
+			// 	alert("welcome");
+			// }
+
+			AV.initialize("{{ay476i55kmtitzgcqmfzk1fj1cdkk87sc0d7n5opwqszf8sg}}", "{{cgwy0xfnz1mxbb2wunp1k512bretcq0e2pswxtgx03f6q7vk}}");
+			var TestObject = AV.Object.extend("TestObject");
+			var testObject = new TestObject();
+			testObject.save({foo: "bar"}, {
+			  success: function(object) {
+			  	alert("LeanCloud works!");
+			  }
+			});
 		</script>
 	</head>
 	<body>
+		body 内容
 		<?php
-		Congrats, you just set up your cloud code project.<hello from index.php>
+			Congrats, you just set up your cloud code project.<hello from index.php>
 		?>
 	</body>
 </html>
